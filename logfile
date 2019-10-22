@@ -1,0 +1,186 @@
+2019-10-22 10:22:36,529 p=3092 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:22:36,537 p=3092 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:22:41,050 p=3092 u=root |  ok: [3.16.150.115]
+2019-10-22 10:22:41,068 p=3092 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:22:41,084 p=3092 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'items' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: install packages\n    ^ here\n"}
+2019-10-22 10:22:41,086 p=3092 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:22:41,086 p=3092 u=root |  3.16.150.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:23:06,888 p=3267 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:23:06,896 p=3267 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:23:07,849 p=3267 u=root |  ok: [3.16.150.115]
+2019-10-22 10:23:07,867 p=3267 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:23:07,882 p=3267 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'items' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: install packages\n    ^ here\n"}
+2019-10-22 10:23:07,884 p=3267 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:23:07,885 p=3267 u=root |  3.16.150.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:24:17,742 p=3351 u=root |  ERROR! 'with_item' is not a valid attribute for a Task
+
+The error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: install packages
+    ^ here
+
+This error can be suppressed as a warning using the "invalid_task_attribute_failed" configuration
+2019-10-22 10:25:48,065 p=3380 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:25:48,072 p=3380 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:25:49,708 p=3380 u=root |  ok: [3.16.150.115]
+2019-10-22 10:25:49,727 p=3380 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:25:49,740 p=3380 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'nginx']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:26:10,303 p=3380 u=root |  changed: [3.16.150.115] => (item=[u'apache2', u'nginx'])
+2019-10-22 10:26:10,309 p=3380 u=root |  [WARNING]: Updating cache and auto-installing missing dependency: python-apt
+
+2019-10-22 10:26:10,310 p=3380 u=root |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-10-22 10:26:10,330 p=3380 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:26:10,345 p=3380 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 14, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: start services\n    ^ here\n"}
+2019-10-22 10:26:10,348 p=3380 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:26:10,348 p=3380 u=root |  3.16.150.115               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:28:45,385 p=5211 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:28:45,396 p=5211 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:28:47,389 p=5211 u=root |  ok: [3.16.150.115]
+2019-10-22 10:28:47,408 p=5211 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:28:47,421 p=5211 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: install packages\n    ^ here\n"}
+2019-10-22 10:28:47,423 p=5211 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:28:47,423 p=5211 u=root |  3.16.150.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:30:02,109 p=5379 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:30:02,117 p=5379 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:30:03,796 p=5379 u=root |  ok: [3.16.150.115]
+2019-10-22 10:30:03,815 p=5379 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:30:03,830 p=5379 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: install packages\n    ^ here\n"}
+2019-10-22 10:30:03,832 p=5379 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:30:03,832 p=5379 u=root |  3.16.150.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:31:53,840 p=5542 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:31:53,848 p=5542 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:31:55,503 p=5542 u=root |  ok: [3.16.150.115]
+2019-10-22 10:31:55,521 p=5542 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:31:55,536 p=5542 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'nginx']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:31:57,387 p=5542 u=root |  ok: [3.16.150.115] => (item=[u'apache2', u'nginx'])
+2019-10-22 10:31:57,408 p=5542 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:31:58,157 p=5542 u=root |  changed: [3.16.150.115] => (item=apache2)
+2019-10-22 10:32:00,996 p=5542 u=root |  failed: [3.16.150.115] (item=nginx) => {"ansible_loop_var": "item", "changed": false, "item": "nginx", "msg": "Unable to start service nginx: Job for nginx.service failed because the control process exited with error code.\nSee \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+2019-10-22 10:32:01,002 p=5542 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:32:01,003 p=5542 u=root |  3.16.150.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:33:50,457 p=6228 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:33:50,464 p=6228 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:33:52,123 p=6228 u=root |  ok: [3.16.150.115]
+2019-10-22 10:33:52,142 p=6228 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:33:52,155 p=6228 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'docker*']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:34:23,149 p=6228 u=root |  changed: [3.16.150.115] => (item=[u'apache2', u'docker*'])
+2019-10-22 10:34:23,172 p=6228 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:34:24,041 p=6228 u=root |  changed: [3.16.150.115] => (item=apache2)
+2019-10-22 10:34:24,324 p=6228 u=root |  failed: [3.16.150.115] (item=docker*) => {"ansible_loop_var": "item", "changed": false, "item": "docker*", "msg": "Unable to enable service docker*: Failed to enable unit: Unit file docker\\x2a.service does not exist.\n"}
+2019-10-22 10:34:24,330 p=6228 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:34:24,330 p=6228 u=root |  3.16.150.115               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:34:43,490 p=9270 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:34:43,501 p=9270 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:34:44,543 p=9270 u=root |  ok: [3.16.150.115]
+2019-10-22 10:34:44,564 p=9270 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:34:44,577 p=9270 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'docker*']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:34:48,619 p=9270 u=root |  ok: [3.16.150.115] => (item=[u'apache2', u'docker*'])
+2019-10-22 10:34:48,642 p=9270 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:34:49,481 p=9270 u=root |  changed: [3.16.150.115] => (item=apache2)
+2019-10-22 10:34:50,693 p=9270 u=root |  changed: [3.16.150.115] => (item=docker)
+2019-10-22 10:34:50,703 p=9270 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:34:50,703 p=9270 u=root |  3.16.150.115               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:36:21,957 p=10101 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:36:21,967 p=10101 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:36:24,150 p=10101 u=root |  ok: [3.16.150.115]
+2019-10-22 10:36:24,172 p=10101 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:36:24,185 p=10101 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'nginx']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:36:26,145 p=10101 u=root |  ok: [3.16.150.115] => (item=[u'apache2', u'nginx'])
+2019-10-22 10:36:26,168 p=10101 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:36:26,772 p=10101 u=root |  ok: [3.16.150.115] => (item=apache2)
+2019-10-22 10:36:29,676 p=10101 u=root |  failed: [3.16.150.115] (item=nginx) => {"ansible_loop_var": "item", "changed": false, "item": "nginx", "msg": "Unable to start service nginx: Job for nginx.service failed because the control process exited with error code.\nSee \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+2019-10-22 10:36:29,683 p=10101 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:36:29,684 p=10101 u=root |  3.16.150.115               : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:40:53,402 p=12325 u=root |  ERROR! 'with_items' is not a valid attribute for a Play
+
+The error appears to be in '/root/test-dir/with_items.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: with_items.yml
+  ^ here
+
+2019-10-22 10:42:06,368 p=12333 u=root |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/root/test-dir/with_items.yml': line 22, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   with_items:
+   ^ here
+
+2019-10-22 10:42:31,088 p=12340 u=root |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/root/test-dir/with_items.yml': line 18, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   with_items:
+   ^ here
+
+2019-10-22 10:43:18,093 p=12348 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:43:18,101 p=12348 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:43:19,908 p=12348 u=root |  ok: [3.16.150.115]
+2019-10-22 10:43:19,930 p=12348 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:43:19,944 p=12348 u=root |  fatal: [3.16.150.115]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/root/test-dir/with_items.yml': line 5, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n  - name: install packages\n    ^ here\n"}
+2019-10-22 10:43:19,946 p=12348 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:43:19,946 p=12348 u=root |  3.16.150.115               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:44:07,560 p=12519 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:44:07,568 p=12519 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:44:08,539 p=12519 u=root |  ok: [3.16.150.115]
+2019-10-22 10:44:08,560 p=12519 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:44:08,572 p=12519 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'docker']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:44:18,232 p=12519 u=root |  changed: [3.16.150.115] => (item=[u'apache2', u'docker'])
+2019-10-22 10:44:18,255 p=12519 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:44:18,853 p=12519 u=root |  ok: [3.16.150.115] => (item=apache2)
+2019-10-22 10:44:19,115 p=12519 u=root |  failed: [3.16.150.115] (item=docker) => {"ansible_loop_var": "item", "changed": false, "item": "docker", "msg": "Could not find the requested service docker: host"}
+2019-10-22 10:44:19,121 p=12519 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:44:19,122 p=12519 u=root |  3.16.150.115               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:45:11,881 p=13778 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:45:11,889 p=13778 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:45:12,894 p=13778 u=root |  ok: [3.16.150.115]
+2019-10-22 10:45:12,915 p=13778 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:45:12,928 p=13778 u=root |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply 
+multiple items and specifying `name: "{{item}}"`, please use `name: ['apache2', 'docker*']` and remove the loop. This feature will be 
+removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-22 10:45:33,043 p=13778 u=root |  changed: [3.16.150.115] => (item=[u'apache2', u'docker*'])
+2019-10-22 10:45:33,066 p=13778 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:45:33,720 p=13778 u=root |  ok: [3.16.150.115] => (item=apache2)
+2019-10-22 10:45:33,991 p=13778 u=root |  ok: [3.16.150.115] => (item=docker)
+2019-10-22 10:45:34,001 p=13778 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:45:34,002 p=13778 u=root |  3.16.150.115               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-10-22 10:45:57,937 p=15060 u=root |  PLAY [with_items.yml] *******************************************************************************************************************
+2019-10-22 10:45:57,948 p=15060 u=root |  TASK [Gathering Facts] ******************************************************************************************************************
+2019-10-22 10:45:58,967 p=15060 u=root |  ok: [3.16.150.115]
+2019-10-22 10:45:58,989 p=15060 u=root |  TASK [install packages] *****************************************************************************************************************
+2019-10-22 10:46:01,773 p=15060 u=root |  ok: [3.16.150.115] => (item=[u'apache2', u'docker*'])
+2019-10-22 10:46:01,797 p=15060 u=root |  TASK [start services] *******************************************************************************************************************
+2019-10-22 10:46:02,384 p=15060 u=root |  ok: [3.16.150.115] => (item=apache2)
+2019-10-22 10:46:02,645 p=15060 u=root |  ok: [3.16.150.115] => (item=docker)
+2019-10-22 10:46:02,655 p=15060 u=root |  PLAY RECAP ******************************************************************************************************************************
+2019-10-22 10:46:02,655 p=15060 u=root |  3.16.150.115               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
